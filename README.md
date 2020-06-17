@@ -44,6 +44,12 @@ published: false
 
 ## Contentful Data schema
 
+### Command to export Contentful Schema and Entries
+
+```bash
+contentful space export --save-file --management-Token=[ContentManagementAPIKey] --space-id=[SpaceID]
+```
+
 #### Page:
 
 - Title: short Text (250 characters)

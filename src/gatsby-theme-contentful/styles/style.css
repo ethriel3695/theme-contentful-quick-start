@@ -71,7 +71,12 @@ ol {
 @tailwind components;
 
 .bgPrimary {
-    @apply text-white bg-green-500;
+    @apply bg-green-500;
+    @apply text-white;
+}
+
+.bgPrimary a {
+    @apply text-white;
 }
 
 .bgPrimary:hover {
