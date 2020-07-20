@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const chalk = require('chalk');
 const path = require('path');
 const { writeFileSync } = require('fs');
-require('dotenv').config();
+require('dotenv').config('../.env.development');
 
 const argv = require('yargs-parser')(process.argv.slice(2));
 
