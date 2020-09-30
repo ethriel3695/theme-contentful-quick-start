@@ -67,38 +67,55 @@ article {
 
 ol {
     @apply list-decimal;
+    list-style-position: inside;
+}
+
+li p {
+    display: inline-block;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+h4 + ul {
+    @apply list-disc;
+}
+
+h5 + ul {
+    @apply list-disc;
 }
 
 @tailwind components;
 
-.bgPrimary {
+.bg-primary {
     @apply bg-green-500;
     @apply text-white;
 }
 
-.bgPrimary a {
+.bg-primary a {
     @apply text-white;
 }
 
-.bgPrimary:hover {
+.bg-primary:hover {
     @apply bg-green-600;
 }
 
-.textPrimary {
+.text-primary {
     @apply text-green-500 !important;;
 }
 
-.textPrimary:hover {
+.text-primary:hover {
     @apply text-green-600 !important;
 }
 
-.borderPrimary {
+.border-primary {
     @apply border-green-500;
 
     @apply text-gray-900;
 }
 
-.borderPrimaryActive {
+.border-primary-active {
     @apply border-green-500 !important;
 
     @apply text-gray-900 !important;

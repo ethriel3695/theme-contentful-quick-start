@@ -4,6 +4,7 @@ label: First Blog Post
 title: First Blog Post
 description: An Example Blog Post
 date: 2020-06-09
+author: Your Name Here
 categories: ['react', 'node', 'gatsby', 'theme', 'contentful', 'blog']
 published: true
 ---
@@ -40,7 +41,7 @@ const Blog = () => {
                 <span>{`${date}`}</span>
                 <div className="grid grid-cols-3 lg:grid-cols-6">
                   {article.frontmatter.categories &&
-                    article.frontmatter.categories.map((category) => {
+                    article.frontmatter.categories.map(category => {
                       return (
                         <p className="shadow-outline border-aqua px-1 mr-2 text-center">
                           {category}
