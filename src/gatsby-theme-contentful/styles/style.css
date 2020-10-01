@@ -129,8 +129,8 @@ h5 + ul {
     @apply .bg-white;
 }
 
-.headerLogoSize {
-    width: 6rem;
+.header-logo-size {
+    width: 4rem;
 }
 
 @tailwind utilities;

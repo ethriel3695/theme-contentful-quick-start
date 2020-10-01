@@ -17,6 +17,8 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.env.*
+# dotenv environment variables file
+.env
 # nyc test coverage
 .nyc_output
 
@@ -51,9 +53,6 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variables file
-.env
-
 # gatsby files
 .cache/
 public
@@ -70,3 +69,6 @@ yarn-error.log
 
 # Contentful Auto Files
 contentful-*
+
+# config files
+config.json

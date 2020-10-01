@@ -38,5 +38,6 @@ module.exports = {
     },
     externalLinks: [{ label: '', link: '' }],
     hasNotifications: false,
+    categories: ['placeholder'],
   },
 };
