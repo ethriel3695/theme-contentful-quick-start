@@ -52,37 +52,85 @@ contentful space export --save-file --management-Token=[ContentManagementAPIKey]
 
 #### Page:
 
-- Title: short Text (250 characters)
+- Title: Short Text (250 characters)
+- Description Long Text
 - Page Type: Short text (250 characters) - Used to render specific page templates in the code
-  - Currently supported page types: (HeroLanding, Landing)
-- Section: References - One to many sections can be added to a page
-- Slug: Short Text (250 Characters) - Page path for content
+  - Currently supported page types: (HeroLanding)
+- Slug: Short Text (250 Characters) - Page route for content
+- Sections: References - One to many sections can be added to a page
+- Author: Short Text
+- Created Date: Date & Time
+- categories: Short Text, List
 
 #### Section:
 
 - Title: Short Text (250 characters)
 - Description: Rich Text
-- Slug: Short Text (250 Characters) - Page path for content
-- Order: Integer - The order that content appears on the page (Ascending)
-- Item: References - One to many items can be added to a section
-- Product: References - One to many products can be added to a section
-- Image: Media - Used for a hero image
-- Gallery:Media - Many files
+- Sub Header: Long Text
+- Order: Integer
 
-#### Item: (Curently only renders as a button)
-
-##### Future Functionality: Add various widget types to be rendered in the code by an `widgetType` or `itemType`
+#### Item:
 
 - Title: Short Text (250 characters)
-- Sub Header: Short Text (250 characters)
-- Link: Short Text (URL) (250 characters) - External links to other websites
-- Slug: Short Text (Slug) - Path to one of the dynamically generated pages (MDX or Contentful)
+- Sub Header: Short Text
+- Link: Short Text (External Link)
+- Slug: Short Text (Internal route)
+
+#### Asset:
+
+- Title: Short Text (250 characters)
+- Asset Type: Short Text (Current Asset Types: Logo)
+- File: Media
+
+#### Call To Action:
+
+- Title: Short Text (250 characters)
+- Text: Long Text
+- Button Text: Short Text
+- Slug: Short Text
+- External Link: Short Text
+
+#### Multiple Call To Action:
+
+- Title: Short Text (250 characters)
+- Description: Rich Text
+- Sub Header: Long Text
+- Call To Action: References, many
+
+#### Gallery:
+
+- Title: Short Text (250 characters)
+- Description: Rich Text
+- Sub Header: Long Text
+- Caption: Short Text
+- Media: References, many
+
+#### Hero:
+
+- Title: Short Text (250 characters)
+- Description: Rich Text
+- Sub Header: Long Text
+- File: Media
+
+#### Media With Caption:
+
+- Title: Short Text (250 characters)
+- Caption: Short Text
+- File: Media
 
 ### Product: (Render a list of products or services)
 
 - Title: Short Text (250 characters)
 - Description: Long Text (Markdown Rendering)
 - Price: Short Text (250 characters)
+- Files: Media, many files
+
+### Products: (A list of the content model Product)
+
+- Title: Short Text (250 characters)
+- Description: Rich Text
+- Sub Header: Long Text
+- Product: References, many
 
 ## Future Additions
 
@@ -92,6 +140,8 @@ contentful space export --save-file --management-Token=[ContentManagementAPIKey]
 - When a component is added, also add Jest and Storybook configurations automatically
 
 ## Quick start
+
+<!-- TODO: Add docs on how to run the schema creation script using `yarn run setup` -->
 
 1.  **Create an Authenticated Site**
 
