@@ -143,6 +143,49 @@ contentful space export --save-file --management-Token=[ContentManagementAPIKey]
 
 <!-- TODO: Add docs on how to run the schema creation script using `yarn run setup` -->
 
+## Getting Started
+
+1. Open up a terminal, command line, etc.
+2. Run the following commands:
+
+```bash
+git clone https://github.com/ethriel3695/theme-contentful-quick-start.git
+
+cd theme-contentful-quick-start
+```
+
+4. Open the repo in your favorite code editor
+
+   - I use VS Code so I run
+
+```bash
+code .
+```
+
+5. When the repo is open either use the VS Code Terminal or regular terminal and run
+
+```bash
+yarn
+```
+
+## Contentful
+
+1. Setup a <a href="https://www.contentful.com/sign-up/" target="_blank" rel="noopener noreferrer">Contentful</a> account
+1. <a
+   href="https://www.contentful.com/r/knowledgebase/creating-a-website-in-five-minutes/"
+   target="\_blank"
+   rel="noopener noreferrer"
+   > Contentful
+   > </a> guide for setup
+
+Sections to look at:
+
+- Create a new `data bucket`, or space, to store content
+- Generate a Content Management API access token
+- Generate a Content Delivery API access token
+
+**NOTE:** Make sure to record the `spaceId`, `content management api access token` and `content delivery api access token`
+
 1.  **Create an Authenticated Site**
 
     In order to get an authentication enabled site up and going follow these steps:
