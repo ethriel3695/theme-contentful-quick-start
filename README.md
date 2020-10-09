@@ -143,15 +143,29 @@ contentful space export --save-file --management-Token=[ContentManagementAPIKey]
 
 <!-- TODO: Add docs on how to run the schema creation script using `yarn run setup` -->
 
+## Bash Commands For the Terminal
+
+`cd` navigates to a folder on your computer
+`git clone` Allows you to copy a repository in Github
+`cd [name of folder]` Takes you into folder
+`code .` Opens visual studio code for the current folder directory
+
 ## Getting Started
+
+**NOTE:** If you don't have a source folder then create one with `mkdir source`
+It's beneficial to store all your repositories in a source folder
 
 1. Open up a terminal, command line, etc.
 2. Run the following commands:
 
 ```bash
-git clone https://github.com/ethriel3695/theme-contentful-quick-start.git
+cd /source #Press Enter
 
-cd theme-contentful-quick-start
+git clone https://github.com/ethriel3695/theme-contentful-quick-start.git #Enter
+
+#Once the repository is done cloning, run
+
+cd theme-contentful-quick-start #Enter
 ```
 
 4. Open the repo in your favorite code editor
@@ -159,7 +173,7 @@ cd theme-contentful-quick-start
    - I use VS Code so I run
 
 ```bash
-code .
+code . #Enter
 ```
 
 5. When the repo is open either use the VS Code Terminal or regular terminal and run
@@ -167,6 +181,9 @@ code .
 ```bash
 yarn
 ```
+
+**NOTE:** If yarn is not installed on your computer, follow the instructions
+https://classic.yarnpkg.com/en/docs/install
 
 ## Contentful
 
@@ -184,7 +201,24 @@ Sections to look at:
 - Generate a Content Management API access token
 - Generate a Content Delivery API access token
 
+https://www.contentful.com/faq/basics/
+
+https://www.contentful.com/developers/docs/references/authentication/
+
+https://www.contentful.com/developers/docs/references/authentication/#the-content-management-api
+
 **NOTE:** Make sure to record the `spaceId`, `content management api access token` and `content delivery api access token`
+
+Once you have the API keys, create a file in the root of your project named `.env`
+
+and paste the following:
+
+```
+  # Do NOT commit this file to source control
+  CONTENTFUL_SPACE_ID='${spaceId}'
+  CONTENTFUL_MANAGEMENT_TOKEN='${managementToken}'
+  CONTENTFUL_ACCESS_TOKEN='${accessToken}'
+```
 
 1.  **Create an Authenticated Site**
 
