@@ -141,7 +141,8 @@ contentful space export --save-file --management-Token=[ContentManagementAPIKey]
 
 ## Quick start
 
-<!-- TODO: Add docs on how to run the schema creation script using `yarn run setup` -->
+<!-- TODO: Add /blog root page to setup.js script with ArticleSummary pageType -->
+<!-- Docs for optional Article page and navigation with sub articles -->
 
 ## Bash Commands For the Terminal
 
@@ -188,7 +189,9 @@ https://classic.yarnpkg.com/en/docs/install
 ## Contentful
 
 1. Setup a <a href="https://www.contentful.com/sign-up/" target="_blank" rel="noopener noreferrer">Contentful</a> account
-1. <a
+2. Choose the option to build a content rich App `For Developers`
+3. Skip the static site setup and go to the home screen of your space
+4. <a
    href="https://www.contentful.com/r/knowledgebase/creating-a-website-in-five-minutes/"
    target="\_blank"
    rel="noopener noreferrer"
@@ -207,6 +210,13 @@ https://www.contentful.com/developers/docs/references/authentication/
 
 https://www.contentful.com/developers/docs/references/authentication/#the-content-management-api
 
+5. Create an empty space in Contentful by following the Guide for Setup above
+6. Generate a Content Management API access token
+- Store key in notepad or other text editor
+7. Generate a Content Delivery API access token
+- Store key in notepad or other text editor
+
+
 **NOTE:** Make sure to record the `spaceId`, `content management api access token` and `content delivery api access token`
 
 Once you have the API keys, create a file in the root of your project named `.env`
@@ -219,40 +229,29 @@ and paste the following:
   CONTENTFUL_MANAGEMENT_TOKEN='${managementToken}'
   CONTENTFUL_ACCESS_TOKEN='${accessToken}'
 ```
+8. Replace the dollar sign, curly praces and placeholder text with your credentials you just
+copied from Contentful
 
-1.  **Create an Authenticated Site**
+9. Look at your `package.json` file and find the `setup` script
+10. Go to the terminal and type `yarn run setup` and hit enter
+11. Verify that the Content Models and Content have been created in Contentful
+12. Create an `.env.development` file
+paste
+```
+GATSBY_CONTENTFUL_SPACEID=spaceId
+GATSBY_CONTENTFUL_API=accessToken
+GATSBY_GOOGLE_ANALYTICS_ID=placeholder
+```
 
-    In order to get an authentication enabled site up and going follow these steps:
+13. In the terminal, type `yarn run develop` and enter
 
-    - Open a terminal of your choice **(Terminal on mac, Command Prompt, Powershell or Bash on Windows)**
-    - Navigate to the directory where you store your repositories
-
-    - Example:
-
-      ```sh
-      cd Users/[username]/source
-      ```
-
-    - Clone the authentication demo
-      ```sh
-       git clone https://github.com/ethriel3695/authentication-demo
-      ```
-
-2.  **Open the source code and start editing!**
-
-    - Open the `authentication-demo` directory in your code editor of choice
+At this point, your web application runs and displays content
 
 ## Additional configuration
 
 In addition to the theme options, there are a handful of items you must modify via the `siteMetadata` object in your site's `gatsby-config.js`
 
 The Social tags, if left as an empty string will not appear in the footer
-
-### Authentication
-
-Authentication now works out of the box if you provide the credentials in the `.env.development` and `.env.production` files
-Also, in `gatsby-config.js` the `isAuthApp` key needs to be set to `true`
-If you do not have an Auth0 account create one for free [Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D)
 
 ```js
 // gatsby-config.js
@@ -285,17 +284,6 @@ module.exports = {
 };
 ```
 
-## Content directories
-
-| Key           | Default value                | Description                                                                                                 |
-| ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `contentPath` | `/content/post`              | Directory for mdx content                                                                                   |
-| `assetPath`   | `/content/assets`            | Location of assets                                                                                          |
-| `logo`        | `/content/assets/logo`       | An image in the logo directory will replace the title in the header with a brand logo instead               |
-| `newsletter`  | `/content/assets/newsletter` | A pdf in this directory will provide a static asset for a newsletter with the newsletter link in the header |
-| `files`       | `/content/assets/files`      | A directory to store files for use across the website                                                       |
-| `mdx`         | `true`                       | MDX renders the additional pages in the site currently and is used alongside contentful                     |
-
 ## Page/Post Creation MDX
 
 - Create a `content` folder
@@ -307,15 +295,30 @@ module.exports = {
 
 ```mdx
 ---
-slug: /sample
+slug: /blog/sample
 label: Navigation Text
 title: Title of post
 description: Description of post
-date: Date post is written (Ex. 2020-02-07) (Not Required)
-categories: ['react', 'node'] (Not currently rendered but in progress)
+date: 2020-09-07
+author: Article Creator Name
+categories: ['react', 'node', 'blog']
 published: true
 ---
 ```
+
+<!--TODO: Add MDX format reference-->
+
+## Content directories
+
+| Key           | Default value                | Description                                                                                                 |
+| ------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `contentPath` | `/content/post`              | Directory for mdx content                                                                                   |
+| `assetPath`   | `/content/assets`            | Location of assets                                                                                          |
+| `logo`        | `/content/assets/logo`       | An image in the logo directory will replace the title in the header with a brand logo instead               |
+| `newsletter`  | `/content/assets/newsletter` | A pdf in this directory will provide a static asset for a newsletter with the newsletter link in the header |
+| `files`       | `/content/assets/files`      | A directory to store files for use across the website                                                       |
+| `mdx`         | `true`                       | MDX renders the additional pages in the site currently and is used alongside contentful                     |
+
 
 ## Page/Post Creation with Contentful
 
