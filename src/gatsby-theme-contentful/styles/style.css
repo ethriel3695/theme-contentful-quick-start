@@ -1,7 +1,10 @@
+/** purgecss start ignore */
 @tailwind base;
-
 html body {
-    @apply .bg-white .font-sans .antialiased;
+    @apply font-serif;
+    @apply leading-loose;
+    @apply antialiased;
+
 }
 
 h1 {
@@ -21,7 +24,7 @@ h2 {
 }
 
 h3 {
-    @apply text-2xl;
+    @apply text-3xl;
 
     @apply font-semibold;
 
@@ -115,14 +118,14 @@ h5 + ul {
     @apply text-gray-900;
 }
 
+.border-primary:hover {
+    @apply border-green-600;
+}
+
 .border-primary-active {
     @apply border-green-500 !important;
 
     @apply text-gray-900 !important;
-}
-
-.borderPrimary:hover {
-    @apply border-green-500;
 }
 
 .swiper-pagination-bullet {
@@ -130,13 +133,13 @@ h5 + ul {
 }
 
 .header-logo-size {
-    width: 4rem;
+    width: 5rem;
 }
 
 @tailwind utilities;
 
 .container {
-    @apply .max-w-screen-xl .mx-auto .px-4;
+    @apply .max-w-screen-lg .mx-auto .px-4;
 }
 
 @screen md {
@@ -154,3 +157,4 @@ h5 + ul {
         @apply .px-8;
     }
 }
+/* purgecss end ignore */
