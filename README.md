@@ -190,6 +190,8 @@ https://www.gatsbyjs.com/docs/mdx/markdown-syntax/
 
 ## Optional functionality for a Blog/Article setup
 
+Run `yarn blog:setup` and you now have an ArticleSummary page and related articles
+
 In order to have an article or blog on the site you need to add page content
 in Contentful
 
@@ -240,6 +242,11 @@ for the article to show up
 ### Option 2: Create articles using Contentful
 
 <!--TODO: Add the steps to create an article in Contentful -->
+
+^^I've decided to bake this into a script and abstract it so the user can just have an example
+I'm going to look into the docs on how to import just data into Contentful
+and then write the Blog data and sample article into contentful through a running of a script
+just like the setup process
 
 ## Content directories
 

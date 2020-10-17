@@ -11,6 +11,7 @@
     "serve": "gatsby serve",
     "test:build": "yarn run build && yarn run serve",
     "setup": "node ./scripts/setup.js",
+    "blog:setup": "contentful space import --config config.json",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
